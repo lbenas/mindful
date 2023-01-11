@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+        body{
+            background-color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+        }
+        .load-screen{
+            background-image: url('https://images.unsplash.com/photo-1499728603263-13726abce5fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        .panel{
+            height: 100vh;
+            flex: 1;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            margin-top: 4px;
+            position: relative;
+        }
+        .register{
+            background-image: url('https://images.unsplash.com/photo-1526779259212-939e64788e3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fG1pbmRmdWxuZXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+            margin-right: 2px;
+        }
+        .login{
+            background-image: url('https://images.unsplash.com/photo-1495584816685-4bdbf1b5057e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fG1pbmRmdWxuZXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+            margin-left: 2px;
+        }
+        a{
+            color: #f5f5f5;
+            text-decoration: none;
+            font-size: 25px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+    <title>Mindful</title>
+</head>
+<body>
+    <% if(messages.error){ %>
+        <%= messages.error %>
+    <% } %> 
+    <div class="load-screen">
+        <br><br><br><br>
+        <h1>be mindful</h1>
+    </div>
+    <div class="container">
+        <div class="panel register"> <a href="/register">Register</a></div>
+        <div class="panel login"><a href="/login">Login</a></div>
+    </div>
+
+
+    
+
+</body>
+</html>

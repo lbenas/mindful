@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+        body{
+            background-color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            color: rgb(179, 131, 226);
+            text-align: center;
+        }
+        h1{
+            font-size: 60px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .panel{
+            height: 75vh;
+            display: flex;
+            position: relative;
+            border-radius: 30px;
+            flex: 1;
+        }
+        .water{
+            background-image: url('https://images.unsplash.com/photo-1471520201477-47a62a269a87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWluZGZ1bG5lc3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .inspire{
+            background-image: url('https://images.unsplash.com/photo-1520371764250-8213f40bc3ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW5zcGlyYXRpb25hbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        a{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #f5f5f5;
+        }
+        form{
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            display: block;
+            padding-bottom: 20px;
+               }
+    </style>
+    <title>Mindfulness Home</title>
+</head>
+<body>
+    <% if(messages.error){ %>
+        <%= messages.error %>
+    <% } %> 
+    <h1>be mindful</h1>
+    <form action="/logout?_method=DELETE" method="post">
+        <button type="submit">Log Out</button>
+    </form>
+    <div class="container">
+        <div class="panel water"><a href="/water">Drink Water</a></div>
+        <div class="panel inspire"><a href="/inspire">Inspire Yourself</a</div>
+    </div>
+<br>
+   
+</body>
+</html>
